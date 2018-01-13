@@ -1,7 +1,7 @@
 <template>
 	<div id="shopping-cart">
 		<h2>My cart</h2>
-		<ul id="cart-items">
+		<ul v-if="render" id="cart-items">
 			<li v-for="cartItem in cartItems" class="li">
 				<div class="cart-item">
 					<div class="image-wrapper">
@@ -24,15 +24,15 @@
 		name: 'shopping-cart',
 		data() {
 			return {
-				cartItems: this.getCartItems()
+				cartItems: this.getCartItems(),
+				render: true
 			}
 		},
 		methods: {
 			quantityChanged: function(event, item){
 				if (!isNaN(event.target.value) && parseInt(event.target.value) >= 0){
 					item.count = event.target.value;
-					localStorage.setItem('cart', JSON.stringify(this.cartItems));
-					this.$eventBus.$emit('updateCartCount', this.getCountFromLocalStorage());
+					this.updateLocalStorage(this.cartItems);
 				}
 			},
 			getCartItems: function(){
@@ -42,8 +42,13 @@
 			},
 			removeItem: function(event){
 				var updatedArr = this.cartItems.filter(el => el.id !== event.target.id);
-				console.log(updatedArr.length, this.cartItems.length);
-				localStorage.setItem('cart', updatedArr);
+				this.updateLocalStorage(updatedArr);
+				this.rerender();
+			},
+			rerender: function(){
+				this.$nextTick(function(){
+					this.cartItems = this.getCartItems();
+				});
 			}
 		}
 	}

@@ -34,11 +34,10 @@ export default {
   			var index = cartItems.findIndex(el => el.id === item.id);
   			if (index !== -1){
   				cartItems[index].count = parseInt(cartItems[index].count)+1;
-  				localStorage.setItem('cart', JSON.stringify(cartItems));
+  				this.updateLocalStorage(cartItems);
   			} else {
   				this.addNewItem(item, cartItems);
   			}
-  			this.$eventBus.$emit('updateCartCount', this.getCountFromLocalStorage());
   		} else {
   			this.addNewItem(item, []);
   			this.$eventBus.$emit('updateCartCount', this.getCountFromLocalStorage());
@@ -47,7 +46,7 @@ export default {
   	addNewItem: function(newItem, arr){
   		var item = Object.assign({}, newItem, {count: 1});
   		arr.push(item);
-  		localStorage.setItem('cart', JSON.stringify(arr));
+  		this.updateLocalStorage(arr);
   	}
   }
 }

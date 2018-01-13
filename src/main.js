@@ -29,6 +29,10 @@ Vue.mixin({
 				return count;
 			}
 			return 0;
+		},
+		updateLocalStorage: function(arr) {
+			localStorage.setItem('cart', JSON.stringify(arr));
+			this.$eventBus.$emit('updateCartCount', this.getCountFromLocalStorage());
 		}
 	}
 });
