@@ -49,7 +49,7 @@ export default {
   position: fixed;
   height: 100px;
   width: 100%;
-  background-color: #21ce99;
+  background-color: #41b883;
   top: 0;
   left: 0;
   margin: 0;

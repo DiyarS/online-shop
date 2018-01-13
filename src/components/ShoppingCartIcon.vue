@@ -34,6 +34,6 @@
 		margin-top: -3px;
 		margin-left: 5px;
 		font-size: 0.4em;
-		color: green;
+		color: #41b883;
 	}
 </style>

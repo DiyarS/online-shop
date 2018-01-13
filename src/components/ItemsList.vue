@@ -7,7 +7,7 @@
         <div class="listing-item">
         	<img :src="item.img" :alt="item.title"/>
         	<div>{{item.title}}</div>
-        	<div>{{item.price}}</div>
+        	<div>${{item.price}}</div>
       	</div>
       	<i class="fa-cart-plus" :id="item.id" @click="addItemToCart(item)" ></i>
       </li>
@@ -40,7 +40,6 @@ export default {
   			}
   		} else {
   			this.addNewItem(item, []);
-  			this.$eventBus.$emit('updateCartCount', this.getCountFromLocalStorage());
   		}
   	},
   	addNewItem: function(newItem, arr){
@@ -62,7 +61,7 @@ h2{
   font-style: italic;
 }
 
-ul {
+#items-list ul {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -71,7 +70,6 @@ ul {
   margin: auto;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 li.store-li {
@@ -79,7 +77,7 @@ li.store-li {
   width: 40%;
   display: inline-block;
   margin: 10px 20px;
-  border: 1px solid #21ce99;
+  border: 1px solid #41b883;
 }
 
 i {

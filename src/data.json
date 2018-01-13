@@ -4,43 +4,43 @@
 			"id": "1",
 			"title": "Iphone X Wallet Phone Case",
 			"img": "src/assets/img/1.jpg",
-			"price": "$14.86"
+			"price": "14.86"
 		},
 		{
 			"id": "2",
 			"title": "Iphone X Case, Clear TPU Ultra-thin",
 			"img": "src/assets/img/2.jpg",
-			"price": "$10.99"
+			"price": "10.99"
 		},
 		{
 			"id": "3",
 			"title": "Watch 38mm Aluminum Case",
 			"img": "src/assets/img/3.jpg",
-			"price": "$218.98"
+			"price": "218.98"
 		},
 		{
 			"id": "4",
 			"title": "Iphone 6s only Water resistant case",
 			"img": "src/assets/img/4.jpg",
-			"price": "$38.00"
+			"price": "38.00"
 		},
 		{
 			"id": "5",
 			"title": "Iphone X PU Leather Wallet Case",
 			"img": "src/assets/img/5.jpg",
-			"price": "$15.99"
+			"price": "15.99"
 		},
 		{
 			"id": "6",
 			"title": "Samsung Galaxy Not 8/S8 Docking charger",
 			"img": "src/assets/img/6.jpg",
-			"price": "$18.99"
+			"price": "18.99"
 		},
 		{
 			"id": "7",
 			"title": "Samsung Galaxy S8 64GB Unlocked Phone",
 			"img": "src/assets/img/7.jpg",
-			"price": "$643"
+			"price": "643"
 		}
 	]
 }
