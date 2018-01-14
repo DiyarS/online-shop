@@ -97,6 +97,7 @@ li.store-li {
 	border: 1px solid #41b883;
 }
 
+
 li.store-li img {
 	width: 100%;
 	max-width: 200px;
@@ -112,4 +113,15 @@ i {
 a {
 	color: #42b983;
 }
+
+@media screen and (max-width: 480px){
+	#items-list ul {
+		width: 100%;
+	}
+	li.store-li {
+		width: 100%;
+	}
+}
+
+
 </style>

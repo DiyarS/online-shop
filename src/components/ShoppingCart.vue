@@ -108,6 +108,7 @@ export default {
 	-moz-padding-start: 0px;
 	-webkit-padding-start: 0px;
 }
+
 li {
 	position:relative;
 	width: 100%;
@@ -132,6 +133,7 @@ li {
 	justify-content: center;
 	-webkit-justify-content:center;
 	font-size: 20px;
+	font-size: calc(100% + .2vw);
 }
 .cart-item .image-wrapper {
 	height: 120px;
@@ -190,6 +192,30 @@ li {
 
 #total-sum span:first-child {
 	font-weight: 900;
+}
+
+
+
+@media screen and (max-width: 480px){
+	#shopping-cart ul {
+		width: 95%;
+	}
+
+	.cart-item .item-name {
+		width: 30%;
+	}
+
+	.cart-item .item-quantity-wrapper {
+		width: 70px;
+	}
+
+	.cart-item .item-quantity-wrapper button {
+		padding: 5px 5px;
+	}
+
+	.cart-item .image-wrapper {
+		/*width: 40px;*/
+	}
 }
 
 </style>
