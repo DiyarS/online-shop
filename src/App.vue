@@ -8,8 +8,8 @@
       <img src="./assets/logo.png">
       <router-view></router-view>
     </div>
-    
   </div>
+
 </template>
 
 <script>
@@ -19,13 +19,9 @@ import ShoppingCartIcon from './components/ShoppingCartIcon.vue';
 
 export default {
   name: 'app',
-  components: { 
-    Home, ShoppingCartIcon
-  },
-  methods: {
-    updateCartCount: function(cartItemsCount) {
-      console.log(cartItemsCount);
-    }
+  components: {
+    Home,
+    ShoppingCartIcon
   },
   data() {
     return {
@@ -36,6 +32,12 @@ export default {
 </script>
 
 <style>
+
+body {
+  max-width: 1280px;
+  margin: auto;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,12 +58,12 @@ export default {
   z-index: 1;
 }
 
-#nav-bar > a:first-child {
+#nav-bar>a:first-child {
   position: relative;
   float: left;
 }
 
-#nav-bar > a:nth-child(2) {
+#nav-bar>a:nth-child(2) {
   position: relative;
   float: right;
 }
@@ -72,10 +74,7 @@ export default {
 }
 
 .fa-stack {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: white;
-  }
-
-
-
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+}
 </style>

@@ -11,6 +11,7 @@ const router = new VueRouter({
 	routes
 });
 
+// event bus used by sibling components to exchange data
 const Bus = new Vue();
 Object.defineProperties(Vue.prototype, {
 	$eventBus: {
@@ -21,7 +22,12 @@ Object.defineProperties(Vue.prototype, {
 });
 
 Vue.mixin({
+	// functions available for every component
 	methods: {
+		/*
+		PARAMETERS: none
+		DESCRIPTION: the function return the number of items added to the cart
+		*/
 		getCountFromLocalStorage: function() {
 			var cartItems = JSON.parse(localStorage.getItem('cart'));
 			if (cartItems !== null) {
@@ -30,6 +36,11 @@ Vue.mixin({
 			}
 			return 0;
 		},
+
+		/*
+		PARAMETERS: arr: array to store in the local storage;
+		DESCRIPTION: the function receives an array, stores it in the local storage and emits an event to notify other components listening for that event
+		*/
 		updateLocalStorage: function(arr) {
 			localStorage.setItem('cart', JSON.stringify(arr));
 			this.$eventBus.$emit('updateCartCount', this.getCountFromLocalStorage());

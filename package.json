@@ -1,6 +1,6 @@
 {
   "name": "online-shop",
-  "description": "This is a SPA of online-shop",
+  "description": "This is a SPA of online-shop built with VueJS. Images credits: Amazon.com, Inc.",
   "version": "1.0.0",
   "author": "Diyar Sailaubekov <ahmedijar92@gmail.com>",
   "license": "MIT",
@@ -15,11 +15,7 @@
     "vue": "^2.5.11",
     "vue-router": "^3.0.1"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
